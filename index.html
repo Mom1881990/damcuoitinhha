@@ -4,59 +4,66 @@
 <meta charset="UTF-8">
 <title>Thiệp Cưới | Tình & Hà</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Mở thiệp -->
-<div id="cover">
-    <h2>Trân trọng kính mời</h2>
-    <h1>TÌNH & HÀ</h1>
-    <button onclick="openCard()">💌 MỞ THIỆP</button>
-</div>
-
-<!-- Nhạc -->
+<!-- MUSIC -->
 <audio id="music" loop>
-    <source src="music.mp3" type="audio/mpeg">
+  <source src="music.mp3" type="audio/mpeg">
 </audio>
+<button id="musicBtn" onclick="toggleMusic()">🎵</button>
 
-<!-- Nội dung -->
+<!-- COVER -->
+<section id="cover">
+  <div class="cover-content">
+    <p>Trân trọng kính mời</p>
+    <h1>Tình & Hà</h1>
+    <span>21 • 12 • 2025</span>
+    <button onclick="openCard()">MỞ THIỆP</button>
+  </div>
+</section>
+
+<!-- MAIN -->
 <div id="main" class="hidden">
 
 <section class="hero">
-    <h1>TÌNH & HÀ</h1>
-    <p>21 • 12 • 2025</p>
+  <img src="images/couple.jpg">
+  <h2>We are getting married</h2>
+  <h1>Tình & Hà</h1>
 </section>
 
 <section class="countdown">
-    <h2>⏳ Đếm ngược ngày cưới</h2>
-    <div id="timer"></div>
+  <h2>⏳ Ngày Chung Đôi</h2>
+  <div id="timer"></div>
 </section>
 
 <section class="info">
-    <h2>💍 Lễ Thành Hôn</h2>
+  <div class="card">
+    <h3>💍 Lễ Thành Hôn</h3>
+    <p>⏰ 11:00 • 21/12/2025</p>
     <p>📍 Nhà hàng ABC</p>
-    <p>⏰ 11:00 - Chủ Nhật, 21/12/2025</p>
+  </div>
 </section>
 
 <section class="gallery">
-    <h2>📸 Khoảnh khắc yêu thương</h2>
-    <div class="images">
-        <img src="images/1.jpg">
-        <img src="images/2.jpg">
-        <img src="images/3.jpg">
-    </div>
+  <h2>Khoảnh Khắc Yêu Thương</h2>
+  <div class="photos">
+    <img src="images/a1.jpg">
+    <img src="images/a2.jpg">
+    <img src="images/a3.jpg">
+  </div>
 </section>
 
 <section class="map">
-    <h2>📍 Bản đồ chỉ đường</h2>
-    <iframe 
-        src="https://www.google.com/maps?q=10.776889,106.700806&output=embed">
-    </iframe>
+  <h2>Bản Đồ Chỉ Đường</h2>
+  <iframe src="https://www.google.com/maps?q=10.776889,106.700806&output=embed"></iframe>
 </section>
 
 <footer>
-    <p>Rất hân hạnh được đón tiếp 💕</p>
+  <p>Rất hân hạnh được đón tiếp 💕</p>
 </footer>
 
 </div>
