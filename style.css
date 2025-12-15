@@ -1,58 +1,114 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    text-align: center;
-    background: #fff;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background: #fff;
+  color: #333;
 }
 
+#musicBtn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 999;
+  background: #fff;
+  border-radius: 50%;
+  border: none;
+  padding: 10px;
+}
+
+/* COVER */
 #cover {
-    height: 100vh;
-    background: url("https://images.unsplash.com/photo-1519741497674-611481863552") center/cover;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  height: 100vh;
+  background: url("images/bg.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#cover button {
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    background: #d4af37;
-    color: #000;
-    border-radius: 30px;
+.cover-content {
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
 }
 
-.hidden { display: none; }
+.cover-content h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+}
 
+.cover-content button {
+  margin-top: 20px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  border: none;
+  background: #d4af37;
+}
+
+/* HERO */
 .hero {
-    padding: 60px 20px;
-    background: #f7f0ea;
+  padding: 60px 20px;
+  text-align: center;
 }
 
-.countdown, .info, .gallery, .map {
-    padding: 40px 20px;
+.hero img {
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.hero h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+}
+
+/* COUNTDOWN */
+.countdown {
+  background: #f7f2ec;
+  padding: 40px;
+  text-align: center;
 }
 
 #timer {
-    font-size: 22px;
-    margin-top: 15px;
+  font-size: 22px;
 }
 
-.gallery .images img {
-    width: 90%;
-    max-width: 300px;
-    margin: 10px;
-    border-radius: 10px;
+/* INFO */
+.info {
+  padding: 40px;
 }
 
+.card {
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+/* GALLERY */
+.gallery {
+  padding: 40px 20px;
+}
+
+.photos img {
+  width: 90%;
+  max-width: 280px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/* MAP */
 iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
+  width: 100%;
+  height: 300px;
+  border: none;
 }
 
 footer {
-    padding: 30px;
-    background: #f1f1f1;
+  background: #f1f1f1;
+  padding: 30px;
+  text-align: center;
 }
+
+.hidden { display: none; }
