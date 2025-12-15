@@ -1,203 +1,75 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minh Hiếu & Minh Nguyệt – Save the Date</title>
-  <meta name="description" content="Thiệp cưới online Minh Hiếu & Minh Nguyệt – 29/12/2025" />
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --primary:#b89b5e;
-      --dark:#2c2c2c;
-      --light:#faf8f4;
+    :root {
+      --primary: #b89b5e;
+      --dark: #2c2c2c;
+      --light: #faf8f4;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:'Montserrat',sans-serif;
-      background:var(--light);
-      color:var(--dark);
-      line-height:1.6;
-    }
-    img{max-width:100%;display:block}
-    a{text-decoration:none;color:inherit}
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--light); color: var(--dark); line-height:1.6; }
+    img { max-width:100%; display:block; }
+    a { text-decoration:none; color:inherit; }
 
-    /* ===== HERO ===== */
-    .hero{
-      min-height:100vh;
-      background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1523437237164-d442d57cc3c9') center/cover no-repeat;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      color:#fff;
-      padding:40px 20px;
-    }
-    .hero-inner{
-      max-width:720px;
-    }
-    .hero .monogram{
-      font-family:'Playfair Display',serif;
-      font-size:64px;
-      letter-spacing:6px;
-      margin-bottom:10px;
-    }
-    .hero .save{
-      font-size:18px;
-      text-transform:uppercase;
-      letter-spacing:3px;
-      margin-bottom:20px;
-    }
-    .hero h1{
-      font-family:'Great Vibes',cursive;
-      font-size:72px;
-      font-weight:400;
-      margin:10px 0 20px;
-    }
-    .hero .date{
-      font-size:20px;
-      letter-spacing:2px;
-    }
-    .btn{
-      display:inline-block;
-      margin-top:30px;
-      padding:12px 34px;
-      border:1px solid #fff;
-      color:#fff;
-      border-radius:30px;
-      transition:.3s;
-    }
-    .btn:hover{background:#fff;color:#000}
+    /* HERO */
+    .hero { min-height:100vh; background: linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)), url('https://images.unsplash.com/photo-1523437237164-d442d57cc3c9') center/cover no-repeat; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; padding:40px 20px; }
+    .hero-inner { max-width:720px; }
+    .hero .monogram { font-family:'Playfair Display', serif; font-size:64px; letter-spacing:6px; margin-bottom:10px; }
+    .hero .save { font-size:18px; text-transform:uppercase; letter-spacing:3px; margin-bottom:20px; }
+    .hero h1 { font-family:'Great Vibes',cursive; font-size:72px; font-weight:400; margin:10px 0 20px; }
+    .hero .date { font-size:20px; letter-spacing:2px; }
+    .btn { display:inline-block; margin-top:30px; padding:12px 34px; border:1px solid #fff; color:#fff; border-radius:30px; transition:.3s; }
+    .btn:hover { background:#fff; color:#000; }
 
-    /* ===== SECTIONS ===== */
-    section{
-      padding:80px 20px;
-    }
-    .container{
-      max-width:1100px;
-      margin:0 auto;
-    }
-    .section-title{
-      text-align:center;
-      margin-bottom:60px;
-    }
-    .section-title h2{
-      font-family:'Playfair Display',serif;
-      font-size:42px;
-      margin-bottom:10px;
-    }
-    .section-title p{color:#777}
+    /* SECTIONS */
+    section { padding:80px 20px; }
+    .container { max-width:1100px; margin:0 auto; }
+    .section-title { text-align:center; margin-bottom:60px; }
+    .section-title h2 { font-family:'Playfair Display', serif; font-size:42px; margin-bottom:10px; }
+    .section-title p { color:#777; }
 
-    /* ===== COUPLE ===== */
-    .couple{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:50px;
-      align-items:center;
-    }
-    .person{text-align:center}
-    .person img{
-      width:260px;height:260px;
-      object-fit:cover;
-      border-radius:50%;
-      margin:0 auto 20px;
-    }
-    .person h3{
-      font-family:'Playfair Display',serif;
-      font-size:26px;
-      margin-bottom:5px;
-    }
-    .role{color:var(--primary);font-weight:500}
+    /* COUPLE */
+    .couple { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:50px; align-items:center; }
+    .person { text-align:center; }
+    .person img { width:260px; height:260px; object-fit:cover; border-radius:50%; margin:0 auto 20px; }
+    .person h3 { font-family:'Playfair Display', serif; font-size:26px; margin-bottom:5px; }
+    .role { color: var(--primary); font-weight:500; }
 
-    /* ===== STORY ===== */
-    .story-item{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-      gap:40px;
-      margin-bottom:60px;
-      align-items:center;
-    }
-    .story-item:nth-child(even) .story-text{order:2}
-    .story-text h3{font-family:'Playfair Display',serif}
+    /* STORY */
+    .story-item { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:40px; margin-bottom:60px; align-items:center; }
+    .story-item:nth-child(even) .story-text { order:2; }
+    .story-text h3 { font-family:'Playfair Display', serif; }
 
-    /* ===== COUNTDOWN ===== */
-    .countdown{
-      background:#fff;
-      text-align:center;
-      padding:60px 20px;
-    }
-    .time{
-      display:flex;
-      justify-content:center;
-      gap:30px;
-      margin-top:30px;
-    }
-    .box{
-      min-width:80px;
-    }
-    .box span{
-      font-size:40px;
-      font-weight:600;
-      display:block;
-    }
+    /* COUNTDOWN */
+    .countdown { background:#fff; text-align:center; padding:60px 20px; }
+    .time { display:flex; justify-content:center; gap:30px; margin-top:30px; }
+    .box { min-width:80px; }
+    .box span { font-size:40px; font-weight:600; display:block; }
 
-    /* ===== GALLERY ===== */
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:20px;
-    }
+    /* GALLERY */
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; }
 
-    /* ===== EVENTS ===== */
-    .events{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-      gap:40px;
-      text-align:center;
-    }
-    .event{
-      background:#fff;
-      padding:40px 30px;
-      border-radius:12px;
-      box-shadow:0 10px 30px rgba(0,0,0,.05);
-    }
-    .event h3{font-family:'Playfair Display',serif}
+    /* EVENTS */
+    .events { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:40px; text-align:center; }
+    .event { background:#fff; padding:40px 30px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.05); }
+    .event h3 { font-family:'Playfair Display', serif; }
 
-    /* ===== GUESTBOOK ===== */
-    .guestbook{
-      max-width:600px;
-      margin:0 auto;
-      text-align:center;
-    }
-    .guestbook input,.guestbook textarea{
-      width:100%;
-      padding:14px 18px;
-      margin-bottom:16px;
-      border-radius:30px;
-      border:1px solid #ddd;
-      font-family:inherit;
-    }
-    textarea{border-radius:16px}
-    .guestbook button{
-      background:var(--primary);
-      color:#fff;
-      border:none;
-      padding:14px 40px;
-      border-radius:30px;
-      cursor:pointer;
-    }
+    /* GUESTBOOK */
+    .guestbook { max-width:600px; margin:0 auto; text-align:center; }
+    .guestbook input, .guestbook textarea { width:100%; padding:14px 18px; margin-bottom:16px; border-radius:30px; border:1px solid #ddd; font-family:inherit; }
+    textarea { border-radius:16px; }
+    .guestbook button { background:var(--primary); color:#fff; border:none; padding:14px 40px; border-radius:30px; cursor:pointer; }
 
-    /* ===== FOOTER ===== */
-    footer{
-      text-align:center;
-      padding:40px 20px;
-      background:#111;
-      color:#aaa;
-    }
+    /* FOOTER */
+    footer { text-align:center; padding:40px 20px; background:#111; color:#aaa; }
   </style>
 </head>
 <body>
@@ -240,7 +112,6 @@
       <h2>Chuyện chúng mình</h2>
       <p>This is where our forever begins</p>
     </div>
-
     <div class="story-item">
       <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="">
       <div class="story-text">
@@ -248,7 +119,6 @@
         <p>Chúng mình từng là đồng nghiệp tại Samsung R&D và quen nhau suốt 6 năm.</p>
       </div>
     </div>
-
     <div class="story-item">
       <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="">
       <div class="story-text">
@@ -256,7 +126,6 @@
         <p>Ngày 10/01/2020, chúng mình quyết định nói hết cảm xúc của mình.</p>
       </div>
     </div>
-
     <div class="story-item">
       <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="">
       <div class="story-text">
