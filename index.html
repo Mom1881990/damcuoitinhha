@@ -1,219 +1,115 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thiệp Cưới Online - Tên Chú Rể & Tên Cô Dâu</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f9f5f0 url('https://via.placeholder.com/1920x1080/f5e6d3/ffffff?text=Background+Image') no-repeat center center fixed;
-            background-size: cover;
-            color: #333;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        header {
-            padding: 100px 20px;
-            color: #5d4037;
-        }
-        h1, h2, h3 {
-            font-family: 'Dancing Script', cursive; /* Bạn có thể link Google Fonts */
-            color: #8d6e63;
-        }
-        h1 { font-size: 4em; }
-        h2 { font-size: 2.5em; margin: 40px 0 20px; }
-        section {
-            background: rgba(255, 255, 255, 0.85);
-            margin: 40px auto;
-            padding: 40px 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 1s ease;
-        }
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .couple {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin: 40px 0;
-        }
-        .person {
-            width: 45%;
-            min-width: 300px;
-        }
-        .person img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #d7ccc8;
-        }
-        #countdown {
-            font-size: 2em;
-            margin: 40px 0;
-        }
-        #countdown span {
-            display: inline-block;
-            margin: 0 15px;
-            background: #8d6e63;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 10px;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 40px 0;
-        }
-        .gallery img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-        footer {
-            padding: 40px;
-            font-size: 0.9em;
-            color: #666;
-        }
-        @media (max-width: 768px) {
-            h1 { font-size: 3em; }
-            .person { width: 100%; margin: 20px 0; }
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Thiệp Cưới | Tình & Hà</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- Header -->
-        <header>
-            <h1>Tên Chú Rể & Tên Cô Dâu</h1>
-            <p>Chúng tôi sẽ kết hôn vào ngày</p>
-            <h2>29 tháng 12 năm 2025</h2>
-            <p><a href="#rsvp">Gửi lời chúc ♥</a></p>
-        </header>
+<!-- MUSIC -->
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+<button id="musicBtn" onclick="toggleMusic()">🎵</button>
 
-        <!-- Giới thiệu cặp đôi -->
-        <section id="couple-info">
-            <h2>Giới Thiệu</h2>
-            <div class="couple">
-                <div class="person">
-                    <img src="https://via.placeholder.com/200?text=Chú+Rể" alt="Chú rể">
-                    <h3>Nguyễn Minh Hiếu</h3>
-                    <p>(Mô tả ngắn về chú rể...)</p>
-                </div>
-                <div class="person">
-                    <img src="https://via.placeholder.com/200?text=Cô+Dâu" alt="Cô dâu">
-                    <h3>Sái Thị Minh Nguyệt</h3>
-                    <p>(Mô tả ngắn về cô dâu...)</p>
-                </div>
-            </div>
-        </section>
+<!-- COVER -->
+<section id="cover">
+  <div class="cover-box">
+    <p>Trân trọng kính mời</p>
+    <h1>Tình & Hà</h1>
+    <span>21 • 12 • 2025</span>
+    <button onclick="openCard()">MỞ THIỆP</button>
+  </div>
+</section>
 
-        <!-- Câu chuyện chúng mình -->
-        <section id="story">
-            <h2>Chuyện Chúng Mình</h2>
-            <p>Kể câu chuyện gặp gỡ, yêu nhau... (thay nội dung ở đây)</p>
-        </section>
+<!-- MAIN -->
+<main id="main" class="hidden">
 
-        <!-- Countdown -->
-        <section id="countdown-section">
-            <h2>Countdown Đến Ngày Cưới</h2>
-            <div id="countdown">
-                <span id="days">00</span> Ngày
-                <span id="hours">00</span> Giờ
-                <span id="minutes">00</span> Phút
-                <span id="seconds">00</span> Giây
-            </div>
-        </section>
+<!-- HERO -->
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h3>Save The Date</h3>
+    <h1>Tình & Hà</h1>
+    <p>21 • 12 • 2025</p>
+  </div>
+</section>
 
-        <!-- Lịch sự kiện -->
-        <section id="events">
-            <h2>Thời Gian & Địa Điểm</h2>
-            <p><strong>Lễ Vu Quy:</strong> 9:10 sáng - Ngày 29/12/2025<br>Địa chỉ nhà gái...</p>
-            <p><strong>Lễ Thành Hôn:</strong> 11:00 sáng - Ngày 29/12/2025<br>Địa chỉ nhà trai...</p>
-            <p><a href="#rsvp">Xác nhận tham dự</a></p>
-        </section>
+<!-- COUNTDOWN -->
+<section class="countdown">
+  <h2>⏳ Ngày Chung Đôi</h2>
+  <div class="timer">
+    <div><span id="days">00</span><small>Ngày</small></div>
+    <div><span id="hours">00</span><small>Giờ</small></div>
+    <div><span id="minutes">00</span><small>Phút</small></div>
+    <div><span id="seconds">00</span><small>Giây</small></div>
+  </div>
+</section>
 
-        <!-- Album ảnh -->
-        <section id="gallery">
-            <h2>Album Hình Cưới</h2>
-            <div class="gallery">
-                <img src="https://via.placeholder.com/400?text=Ảnh+1" alt="Ảnh cưới">
-                <img src="https://via.placeholder.com/400?text=Ảnh+2" alt="Ảnh cưới">
-                <img src="https://via.placeholder.com/400?text=Ảnh+3" alt="Ảnh cưới">
-                <img src="https://via.placeholder.com/400?text=Ảnh+4" alt="Ảnh cưới">
-                <!-- Thêm ảnh thật của bạn bằng cách thay link -->
-            </div>
-        </section>
+<!-- COUPLE -->
+<section class="couple">
+  <div class="person">
+    <img src="images/couple.jpg">
+    <h3>Chú Rể</h3>
+    <p>Tình</p>
+  </div>
+  <div class="person">
+    <img src="images/couple.jpg">
+    <h3>Cô Dâu</h3>
+    <p>Hà</p>
+  </div>
+</section>
 
-        <!-- Lời chúc & Mừng cưới -->
-        <section id="rsvp">
-            <h2>Sổ Lưu Bút & Hộp Mừng Cưới</h2>
-            <p>Gửi lời chúc cho chúng mình nhé!</p>
-            <!-- Form đơn giản (có thể kết nối backend sau) -->
-            <textarea placeholder="Lời chúc của bạn..." rows="4" style="width:80%; max-width:500px;"></textarea><br><br>
-            <button> Gửi lời chúc </button>
-            <p><strong>Hộp mừng cưới (nếu không tham dự được):</strong><br>
-            Chú rể: Tên - Số tài khoản<br>
-            Cô dâu: Tên - Số tài khoản</p>
-        </section>
+<!-- EVENTS -->
+<section class="events">
+  <h2>Sự Kiện Cưới</h2>
+  <div class="event-card">
+    <h3>Lễ Thành Hôn</h3>
+    <p>⏰ 11:00 • 21/12/2025</p>
+    <p>📍 Nhà hàng ABC</p>
+  </div>
+</section>
 
-        <footer>
-            <p>Trân trọng cảm ơn Quý khách | Được tài trợ bởi [Tên thương hiệu]</p>
-        </footer>
+<!-- GALLERY -->
+<section class="gallery">
+  <h2>Album Hình Cưới</h2>
+  <div class="photos">
+    <img src="images/g1.jpg" onclick="openImg(this.src)">
+    <img src="images/g2.jpg" onclick="openImg(this.src)">
+    <img src="images/g3.jpg" onclick="openImg(this.src)">
+  </div>
+</section>
+
+<!-- GIFT -->
+<section class="gift">
+  <h2>Mừng Cưới 💝</h2>
+  <div class="gift-box">
+    <div>
+      <img src="images/qr1.png">
+      <p>Chú Rể</p>
     </div>
+    <div>
+      <img src="images/qr2.png">
+      <p>Cô Dâu</p>
+    </div>
+  </div>
+</section>
 
-    <script>
-        // Countdown timer - Thay ngày cưới ở đây
-        const weddingDate = new Date("December 29, 2025 00:00:00").getTime();
+<footer>
+  <p>Rất hân hạnh được đón tiếp 💕</p>
+</footer>
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = weddingDate - now;
+</main>
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="this.style.display='none'">
+  <img id="lightImg">
+</div>
 
-            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
-            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
-            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
-            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
-
-            if (distance < 0) {
-                document.getElementById("countdown").innerHTML = "Chúng tôi đã kết hôn! ♥";
-            }
-        }
-
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-
-        // Hiệu ứng fade-in khi scroll
-        const sections = document.querySelectorAll('section');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        sections.forEach(section => observer.observe(section));
-    </script>
+<script src="script.js"></script>
 </body>
 </html>
