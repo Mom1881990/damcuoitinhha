@@ -1,115 +1,346 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<title>Thiệp Cưới | Tình & Hà</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minh Hiếu & Minh Nguyệt – Save the Date</title>
+  <meta name="description" content="Thiệp cưới online Minh Hiếu & Minh Nguyệt – 29/12/2025" />
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#b89b5e;
+      --dark:#2c2c2c;
+      --light:#faf8f4;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Montserrat',sans-serif;
+      background:var(--light);
+      color:var(--dark);
+      line-height:1.6;
+    }
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+
+    /* ===== HERO ===== */
+    .hero{
+      min-height:100vh;
+      background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1523437237164-d442d57cc3c9') center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+      padding:40px 20px;
+    }
+    .hero-inner{
+      max-width:720px;
+    }
+    .hero .monogram{
+      font-family:'Playfair Display',serif;
+      font-size:64px;
+      letter-spacing:6px;
+      margin-bottom:10px;
+    }
+    .hero .save{
+      font-size:18px;
+      text-transform:uppercase;
+      letter-spacing:3px;
+      margin-bottom:20px;
+    }
+    .hero h1{
+      font-family:'Great Vibes',cursive;
+      font-size:72px;
+      font-weight:400;
+      margin:10px 0 20px;
+    }
+    .hero .date{
+      font-size:20px;
+      letter-spacing:2px;
+    }
+    .btn{
+      display:inline-block;
+      margin-top:30px;
+      padding:12px 34px;
+      border:1px solid #fff;
+      color:#fff;
+      border-radius:30px;
+      transition:.3s;
+    }
+    .btn:hover{background:#fff;color:#000}
+
+    /* ===== SECTIONS ===== */
+    section{
+      padding:80px 20px;
+    }
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+    }
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+    .section-title h2{
+      font-family:'Playfair Display',serif;
+      font-size:42px;
+      margin-bottom:10px;
+    }
+    .section-title p{color:#777}
+
+    /* ===== COUPLE ===== */
+    .couple{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:50px;
+      align-items:center;
+    }
+    .person{text-align:center}
+    .person img{
+      width:260px;height:260px;
+      object-fit:cover;
+      border-radius:50%;
+      margin:0 auto 20px;
+    }
+    .person h3{
+      font-family:'Playfair Display',serif;
+      font-size:26px;
+      margin-bottom:5px;
+    }
+    .role{color:var(--primary);font-weight:500}
+
+    /* ===== STORY ===== */
+    .story-item{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:40px;
+      margin-bottom:60px;
+      align-items:center;
+    }
+    .story-item:nth-child(even) .story-text{order:2}
+    .story-text h3{font-family:'Playfair Display',serif}
+
+    /* ===== COUNTDOWN ===== */
+    .countdown{
+      background:#fff;
+      text-align:center;
+      padding:60px 20px;
+    }
+    .time{
+      display:flex;
+      justify-content:center;
+      gap:30px;
+      margin-top:30px;
+    }
+    .box{
+      min-width:80px;
+    }
+    .box span{
+      font-size:40px;
+      font-weight:600;
+      display:block;
+    }
+
+    /* ===== GALLERY ===== */
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:20px;
+    }
+
+    /* ===== EVENTS ===== */
+    .events{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:40px;
+      text-align:center;
+    }
+    .event{
+      background:#fff;
+      padding:40px 30px;
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(0,0,0,.05);
+    }
+    .event h3{font-family:'Playfair Display',serif}
+
+    /* ===== GUESTBOOK ===== */
+    .guestbook{
+      max-width:600px;
+      margin:0 auto;
+      text-align:center;
+    }
+    .guestbook input,.guestbook textarea{
+      width:100%;
+      padding:14px 18px;
+      margin-bottom:16px;
+      border-radius:30px;
+      border:1px solid #ddd;
+      font-family:inherit;
+    }
+    textarea{border-radius:16px}
+    .guestbook button{
+      background:var(--primary);
+      color:#fff;
+      border:none;
+      padding:14px 40px;
+      border-radius:30px;
+      cursor:pointer;
+    }
+
+    /* ===== FOOTER ===== */
+    footer{
+      text-align:center;
+      padding:40px 20px;
+      background:#111;
+      color:#aaa;
+    }
+  </style>
 </head>
 <body>
 
-<!-- MUSIC -->
-<audio id="music" loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
-<button id="musicBtn" onclick="toggleMusic()">🎵</button>
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="monogram">H & N</div>
+    <div class="save">Save the Date</div>
+    <h1>Minh Hiếu & Minh Nguyệt</h1>
+    <div class="date">29 Tháng 12 2025</div>
+    <a href="#guestbook" class="btn">Gửi lời chúc</a>
+  </div>
+</header>
 
-<!-- COVER -->
-<section id="cover">
-  <div class="cover-box">
-    <p>Trân trọng kính mời</p>
-    <h1>Tình & Hà</h1>
-    <span>21 • 12 • 2025</span>
-    <button onclick="openCard()">MỞ THIỆP</button>
+<!-- COUPLE -->
+<section>
+  <div class="container">
+    <div class="couple">
+      <div class="person">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d" alt="Chú rể">
+        <h3>Nguyễn Minh Hiếu</h3>
+        <div class="role">Chú rể</div>
+        <p>Là một người hướng nội, sống kín đáo, coi trọng tình cảm và chữ tín.</p>
+      </div>
+      <div class="person">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Cô dâu">
+        <h3>Sái Thị Minh Nguyệt</h3>
+        <div class="role">Cô dâu</div>
+        <p>Một cô gái sống thiên về cảm xúc, điềm đạm nhưng đầy yêu thương.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- MAIN -->
-<main id="main" class="hidden">
+<!-- STORY -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Chuyện chúng mình</h2>
+      <p>This is where our forever begins</p>
+    </div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <h3>Save The Date</h3>
-    <h1>Tình & Hà</h1>
-    <p>21 • 12 • 2025</p>
+    <div class="story-item">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="">
+      <div class="story-text">
+        <h3>Chúng mình đã từng...</h3>
+        <p>Chúng mình từng là đồng nghiệp tại Samsung R&D và quen nhau suốt 6 năm.</p>
+      </div>
+    </div>
+
+    <div class="story-item">
+      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="">
+      <div class="story-text">
+        <h3>Đồng nghiệp thành tình yêu</h3>
+        <p>Ngày 10/01/2020, chúng mình quyết định nói hết cảm xúc của mình.</p>
+      </div>
+    </div>
+
+    <div class="story-item">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="">
+      <div class="story-text">
+        <h3>Ngày chung đôi</h3>
+        <p>Kể từ hôm nay, em là vợ, anh là chồng và chúng ta là một gia đình.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- COUNTDOWN -->
 <section class="countdown">
-  <h2>⏳ Ngày Chung Đôi</h2>
-  <div class="timer">
-    <div><span id="days">00</span><small>Ngày</small></div>
-    <div><span id="hours">00</span><small>Giờ</small></div>
-    <div><span id="minutes">00</span><small>Phút</small></div>
-    <div><span id="seconds">00</span><small>Giây</small></div>
-  </div>
+  <h2>Đếm ngược ngày cưới</h2>
+  <div class="time" id="countdown"></div>
 </section>
 
-<!-- COUPLE -->
-<section class="couple">
-  <div class="person">
-    <img src="images/couple.jpg">
-    <h3>Chú Rể</h3>
-    <p>Tình</p>
-  </div>
-  <div class="person">
-    <img src="images/couple.jpg">
-    <h3>Cô Dâu</h3>
-    <p>Hà</p>
+<!-- GALLERY -->
+<section>
+  <div class="container">
+    <div class="section-title"><h2>Album Hình Cưới</h2></div>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9">
+      <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92">
+      <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+    </div>
   </div>
 </section>
 
 <!-- EVENTS -->
-<section class="events">
-  <h2>Sự Kiện Cưới</h2>
-  <div class="event-card">
-    <h3>Lễ Thành Hôn</h3>
-    <p>⏰ 11:00 • 21/12/2025</p>
-    <p>📍 Nhà hàng ABC</p>
+<section>
+  <div class="container">
+    <div class="section-title"><h2>Sự kiện cưới</h2></div>
+    <div class="events">
+      <div class="event">
+        <h3>Lễ Thành Hôn</h3>
+        <p>11:00 – 29/12/2025</p>
+        <p>Số 20 Nguyễn Duy Năng, Bắc Giang</p>
+      </div>
+      <div class="event">
+        <h3>Lễ Vu Quy</h3>
+        <p>09:10 – 29/12/2025</p>
+        <p>An Lạc, Trung Giã, Hà Nội</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="gallery">
-  <h2>Album Hình Cưới</h2>
-  <div class="photos">
-    <img src="images/g1.jpg" onclick="openImg(this.src)">
-    <img src="images/g2.jpg" onclick="openImg(this.src)">
-    <img src="images/g3.jpg" onclick="openImg(this.src)">
-  </div>
-</section>
-
-<!-- GIFT -->
-<section class="gift">
-  <h2>Mừng Cưới 💝</h2>
-  <div class="gift-box">
-    <div>
-      <img src="images/qr1.png">
-      <p>Chú Rể</p>
-    </div>
-    <div>
-      <img src="images/qr2.png">
-      <p>Cô Dâu</p>
-    </div>
+<!-- GUESTBOOK -->
+<section id="guestbook">
+  <div class="container">
+    <div class="section-title"><h2>Sổ lưu bút</h2></div>
+    <form class="guestbook">
+      <input type="text" placeholder="Tên của bạn" required>
+      <textarea rows="4" placeholder="Lời chúc..."></textarea>
+      <button type="submit">Gửi lời chúc</button>
+    </form>
   </div>
 </section>
 
 <footer>
-  <p>Rất hân hạnh được đón tiếp 💕</p>
+  <p>© 2025 Minh Hiếu & Minh Nguyệt · Wedding Invitation</p>
 </footer>
 
-</main>
+<script>
+  const target = new Date('2025-12-29T11:00:00').getTime();
+  const el = document.getElementById('countdown');
+  setInterval(()=>{
+    const now = new Date().getTime();
+    const d = target - now;
+    if(d<=0) return;
+    const days = Math.floor(d/(1000*60*60*24));
+    const hours = Math.floor((d%(1000*60*60*24))/(1000*60*60));
+    const mins = Math.floor((d%(1000*60*60))/(1000*60));
+    const secs = Math.floor((d%(1000*60))/1000);
+    el.innerHTML = `
+      <div class='box'><span>${days}</span>Ngày</div>
+      <div class='box'><span>${hours}</span>Giờ</div>
+      <div class='box'><span>${mins}</span>Phút</div>
+      <div class='box'><span>${secs}</span>Giây</div>`;
+  },1000);
+</script>
 
-<!-- LIGHTBOX -->
-<div id="lightbox" onclick="this.style.display='none'">
-  <img id="lightImg">
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
