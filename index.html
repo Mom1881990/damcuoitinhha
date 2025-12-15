@@ -1,22 +1,66 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Trang web của tôi</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #333;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Thiệp Cưới | Tình & Hà</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>👋 Xin chào!</h1>
-    <p>Đây là trang web GitHub Pages đầu tiên của tôi.</p>
+
+<!-- Mở thiệp -->
+<div id="cover">
+    <h2>Trân trọng kính mời</h2>
+    <h1>TÌNH & HÀ</h1>
+    <button onclick="openCard()">💌 MỞ THIỆP</button>
+</div>
+
+<!-- Nhạc -->
+<audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Nội dung -->
+<div id="main" class="hidden">
+
+<section class="hero">
+    <h1>TÌNH & HÀ</h1>
+    <p>21 • 12 • 2025</p>
+</section>
+
+<section class="countdown">
+    <h2>⏳ Đếm ngược ngày cưới</h2>
+    <div id="timer"></div>
+</section>
+
+<section class="info">
+    <h2>💍 Lễ Thành Hôn</h2>
+    <p>📍 Nhà hàng ABC</p>
+    <p>⏰ 11:00 - Chủ Nhật, 21/12/2025</p>
+</section>
+
+<section class="gallery">
+    <h2>📸 Khoảnh khắc yêu thương</h2>
+    <div class="images">
+        <img src="images/1.jpg">
+        <img src="images/2.jpg">
+        <img src="images/3.jpg">
+    </div>
+</section>
+
+<section class="map">
+    <h2>📍 Bản đồ chỉ đường</h2>
+    <iframe 
+        src="https://www.google.com/maps?q=10.776889,106.700806&output=embed">
+    </iframe>
+</section>
+
+<footer>
+    <p>Rất hân hạnh được đón tiếp 💕</p>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
