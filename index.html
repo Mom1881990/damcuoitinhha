@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Minh Hiếu & Minh Nguyệt – Save the Date</title>
+<title>Minh Hiếu & Minh Nguyệt – Thiệp Cưới</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --primary:#b89b5e; --dark:#2c2c2c; --light:#faf8f4; }
@@ -11,6 +11,7 @@
 body{font-family:'Montserrat',sans-serif;background:var(--light);color:var(--dark);line-height:1.6;}
 img{max-width:100%;display:block;}
 a{text-decoration:none;color:inherit;}
+button{cursor:pointer;}
 
 /* HERO */
 .hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1523437237164-d442d57cc3c9') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:40px 20px;position:relative;overflow:hidden;}
@@ -71,6 +72,11 @@ textarea{border-radius:16px;}
 .guestbook button{background:var(--primary);color:#fff;border:none;padding:14px 40px;border-radius:30px;cursor:pointer;}
 .wishes-list{margin-top:30px;max-height:300px;overflow-y:auto;text-align:left;}
 .wish-item{margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #eee;}
+
+/* HỘP MỪNG CƯỚI */
+.gift-box{background:#fff;padding:40px 30px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.05);max-width:600px;margin:0 auto;text-align:center;}
+.gift-box h3{font-family:'Playfair Display',serif;margin-bottom:15px;}
+.gift-box p{margin:5px 0;font-size:16px;}
 
 /* FOOTER */
 footer{text-align:center;padding:40px 20px;background:#111;color:#aaa;}
@@ -149,7 +155,7 @@ footer{text-align:center;padding:40px 20px;background:#111;color:#aaa;}
   </div>
 </section>
 
-<section id="guestbook">
+<section>
   <div class="container">
     <div class="section-title"><h2>Sổ lưu bút</h2></div>
     <form class="guestbook" onsubmit="addWish(event)">
@@ -160,6 +166,18 @@ footer{text-align:center;padding:40px 20px;background:#111;color:#aaa;}
     <div class="wishes-list" id="wishes-list">
       <div class="wish-item"><strong>Lan:</strong> Chúc hai bạn hạnh phúc trăm năm!</div>
       <div class="wish-item"><strong>Hải:</strong> Chúc ngày vui tràn đầy niềm vui và tiếng cười!</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title"><h2>Hộp Mừng Cưới</h2></div>
+    <div class="gift-box">
+      <h3>Tài khoản ngân hàng</h3>
+      <p>Ngân hàng: Vietcombank</p>
+      <p>Chủ TK: Nguyễn Minh Hiếu & Sái Thị Minh Nguyệt</p>
+      <p>STK: 123 456 789 012</p>
     </div>
   </div>
 </section>
