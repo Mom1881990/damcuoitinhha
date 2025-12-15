@@ -4,53 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hiếu & Nguyệt - Đám cưới 21/12/2025</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Lightbox -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
   <style>
-    body { font-family: 'Helvetica Neue', sans-serif; background: #fff0f5; }
-    .section { padding: 60px 20px; }
-    .timeline-item { margin-bottom: 30px; }
+    body { font-family: 'Comic Sans MS', cursive, sans-serif; background: #fff0f5; }
+    .section { padding: 80px 20px; }
+    .hero-bg { background: linear-gradient(135deg, #ffdee9 0%, #b5fffc 100%); }
+    .timeline-item { margin-bottom: 40px; position: relative; }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      top: 0;
+      width: 10px;
+      height: 10px;
+      background: #ff69b4;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.5); opacity: 0.5; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .btn-pink {
+      background: linear-gradient(45deg, #ff6ec4, #7873f5);
+      color: white;
+    }
+    .btn-pink:hover {
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
   </style>
 </head>
 <body>
 
   <!-- Hero -->
-  <section class="section text-center bg-pink-100">
-    <h1 class="text-5xl font-bold mb-4">Hiếu & Nguyệt</h1>
-    <p class="text-xl mb-4">21/12/2025</p>
-    <button class="px-6 py-2 bg-pink-500 text-white rounded hover:bg-pink-600">Xác nhận tham dự</button>
+  <section class="section hero-bg text-center relative overflow-hidden">
+    <h1 class="text-6xl font-bold mb-4" data-aos="fade-down">Hiếu & Nguyệt</h1>
+    <p class="text-2xl mb-6" data-aos="fade-up" data-aos-delay="200">21/12/2025</p>
+    <button class="px-8 py-3 rounded-lg btn-pink text-xl" data-aos="zoom-in" data-aos-delay="400">Xác nhận tham dự</button>
+
+    <!-- Floating hearts -->
+    <div id="hearts-container" class="absolute w-full h-full top-0 left-0 pointer-events-none"></div>
   </section>
 
-  <!-- Giới thiệu cô dâu & chú rể -->
+  <!-- Giới thiệu -->
   <section class="section bg-white">
-    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="text-center">
-        <img src="https://via.placeholder.com/300x300.png?text=Nguyệt" alt="Nguyệt" class="mx-auto rounded-full mb-4">
-        <h2 class="text-2xl font-semibold">Nguyệt</h2>
-        <p>Cô dâu xinh đẹp, dịu dàng, yêu hoa và âm nhạc.</p>
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div class="text-center" data-aos="fade-right">
+        <img src="https://via.placeholder.com/300.png?text=Nguyệt" class="mx-auto rounded-full shadow-lg hover:scale-105 transition-transform duration-500">
+        <h2 class="text-3xl font-bold mt-4">Nguyệt</h2>
+        <p class="mt-2">Cô dâu xinh đẹp, dịu dàng, yêu hoa và âm nhạc.</p>
       </div>
-      <div class="text-center">
-        <img src="https://via.placeholder.com/300x300.png?text=Hiếu" alt="Hiếu" class="mx-auto rounded-full mb-4">
-        <h2 class="text-2xl font-semibold">Hiếu</h2>
-        <p>Chú rể vui tính, yêu thiên nhiên và nấu ăn ngon.</p>
+      <div class="text-center" data-aos="fade-left">
+        <img src="https://via.placeholder.com/300.png?text=Hiếu" class="mx-auto rounded-full shadow-lg hover:scale-105 transition-transform duration-500">
+        <h2 class="text-3xl font-bold mt-4">Hiếu</h2>
+        <p class="mt-2">Chú rể vui tính, yêu thiên nhiên và nấu ăn ngon.</p>
       </div>
     </div>
   </section>
 
   <!-- Timeline -->
   <section class="section bg-pink-50">
-    <h2 class="text-3xl font-bold text-center mb-8">Chuyện chúng mình</h2>
+    <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Chuyện chúng mình</h2>
     <div class="max-w-3xl mx-auto">
-      <div class="timeline-item">
-        <h3 class="text-xl font-semibold">Quen nhau</h3>
+      <div class="timeline-item" data-aos="fade-right">
+        <h3 class="text-2xl font-semibold">Quen nhau</h3>
         <p>Năm 2020, lần đầu gặp nhau tại một buổi tiệc bạn bè.</p>
       </div>
-      <div class="timeline-item">
-        <h3 class="text-xl font-semibold">Yêu nhau</h3>
+      <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
+        <h3 class="text-2xl font-semibold">Yêu nhau</h3>
         <p>Bắt đầu hẹn hò chính thức vào năm 2021.</p>
       </div>
-      <div class="timeline-item">
-        <h3 class="text-xl font-semibold">Ngày cưới</h3>
+      <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+        <h3 class="text-2xl font-semibold">Ngày cưới</h3>
         <p>Chính thức thành vợ chồng vào ngày 21/12/2025.</p>
       </div>
     </div>
@@ -58,52 +97,56 @@
 
   <!-- Countdown -->
   <section class="section text-center bg-white">
-    <h2 class="text-3xl font-bold mb-4">Còn lại</h2>
-    <div id="countdown" class="text-4xl font-semibold text-pink-500"></div>
+    <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Còn lại</h2>
+    <div id="countdown" class="text-5xl font-extrabold text-pink-500" data-aos="zoom-in"></div>
   </section>
 
   <!-- Album hình cưới -->
   <section class="section bg-pink-50">
-    <h2 class="text-3xl font-bold text-center mb-8">Album hình cưới</h2>
-    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
-      <a href="https://via.placeholder.com/600.png?text=1" data-lightbox="wedding">
-        <img src="https://via.placeholder.com/150.png?text=1" class="w-full rounded">
+    <h2 class="text-4xl font-bold text-center mb-8" data-aos="fade-up">Album hình cưới</h2>
+    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+      <a href="https://via.placeholder.com/600.png?text=1" data-lightbox="wedding" data-aos="zoom-in">
+        <img src="https://via.placeholder.com/150.png?text=1" class="w-full rounded-lg shadow-lg hover:scale-110 transition-transform duration-500">
       </a>
-      <a href="https://via.placeholder.com/600.png?text=2" data-lightbox="wedding">
-        <img src="https://via.placeholder.com/150.png?text=2" class="w-full rounded">
+      <a href="https://via.placeholder.com/600.png?text=2" data-lightbox="wedding" data-aos="zoom-in" data-aos-delay="100">
+        <img src="https://via.placeholder.com/150.png?text=2" class="w-full rounded-lg shadow-lg hover:scale-110 transition-transform duration-500">
       </a>
-      <a href="https://via.placeholder.com/600.png?text=3" data-lightbox="wedding">
-        <img src="https://via.placeholder.com/150.png?text=3" class="w-full rounded">
+      <a href="https://via.placeholder.com/600.png?text=3" data-lightbox="wedding" data-aos="zoom-in" data-aos-delay="200">
+        <img src="https://via.placeholder.com/150.png?text=3" class="w-full rounded-lg shadow-lg hover:scale-110 transition-transform duration-500">
       </a>
-      <a href="https://via.placeholder.com/600.png?text=4" data-lightbox="wedding">
-        <img src="https://via.placeholder.com/150.png?text=4" class="w-full rounded">
+      <a href="https://via.placeholder.com/600.png?text=4" data-lightbox="wedding" data-aos="zoom-in" data-aos-delay="300">
+        <img src="https://via.placeholder.com/150.png?text=4" class="w-full rounded-lg shadow-lg hover:scale-110 transition-transform duration-500">
       </a>
     </div>
   </section>
 
-  <!-- Thông tin sự kiện + bản đồ -->
+  <!-- Thông tin sự kiện -->
   <section class="section bg-white">
-    <h2 class="text-3xl font-bold text-center mb-8">Thông tin sự kiện</h2>
+    <h2 class="text-4xl font-bold text-center mb-8" data-aos="fade-up">Thông tin sự kiện</h2>
     <div class="max-w-3xl mx-auto text-center">
-      <p class="mb-2">Lễ thành hôn: 9:00 sáng, 21/12/2025</p>
-      <p class="mb-2">Địa điểm: Trung tâm tiệc cưới XYZ</p>
-      <iframe class="w-full h-64 rounded" src="https://www.google.com/maps/embed?pb=!1m18!..."></iframe>
+      <p class="mb-2" data-aos="fade-up">Lễ thành hôn: 9:00 sáng, 21/12/2025</p>
+      <p class="mb-4" data-aos="fade-up" data-aos-delay="100">Địa điểm: Trung tâm tiệc cưới XYZ</p>
+      <iframe class="w-full h-64 rounded shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!..." data-aos="fade-up" data-aos-delay="200"></iframe>
     </div>
   </section>
 
   <!-- Guestbook -->
-  <section class="section bg-pink-50">
-    <h2 class="text-3xl font-bold text-center mb-4">Gửi lời chúc</h2>
-    <form id="guestbook" class="max-w-md mx-auto flex flex-col gap-4">
-      <input type="text" name="name" placeholder="Tên bạn" class="p-2 border rounded" required>
-      <textarea name="message" placeholder="Lời chúc" class="p-2 border rounded" required></textarea>
-      <button type="submit" class="px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-600">Gửi</button>
+  <section class="section bg-pink-100">
+    <h2 class="text-4xl font-bold text-center mb-6" data-aos="fade-up">Gửi lời chúc</h2>
+    <form id="guestbook" class="max-w-md mx-auto flex flex-col gap-4" data-aos="fade-up" data-aos-delay="100">
+      <input type="text" name="name" placeholder="Tên bạn" class="p-3 border-2 border-pink-300 rounded-lg" required>
+      <textarea name="message" placeholder="Lời chúc" class="p-3 border-2 border-pink-300 rounded-lg" required></textarea>
+      <button type="submit" class="px-6 py-3 rounded-lg btn-pink text-xl hover:scale-105">Gửi</button>
     </form>
-    <div id="messages" class="max-w-md mx-auto mt-4 space-y-2"></div>
+    <div id="messages" class="max-w-md mx-auto mt-6 space-y-3"></div>
   </section>
 
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init({ duration: 1000, once: true });
+
     // Countdown
     const countdown = document.getElementById('countdown');
     const weddingDate = new Date('2025-12-21T09:00:00');
@@ -119,7 +162,7 @@
     }
     setInterval(updateCountdown, 1000);
 
-    // Guestbook (tạm thời lưu ở frontend)
+    // Guestbook
     const guestbook = document.getElementById('guestbook');
     const messages = document.getElementById('messages');
     guestbook.addEventListener('submit', e => {
@@ -127,11 +170,34 @@
       const name = guestbook.name.value;
       const msg = guestbook.message.value;
       const div = document.createElement('div');
-      div.className = "p-2 bg-white rounded shadow";
+      div.className = "p-3 bg-white rounded-lg shadow-lg animate__animated animate__fadeIn";
       div.innerHTML = `<strong>${name}:</strong> ${msg}`;
       messages.prepend(div);
       guestbook.reset();
     });
+
+    // Floating hearts animation
+    const heartsContainer = document.getElementById('hearts-container');
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.innerHTML = '❤️';
+      heart.style.position = 'absolute';
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      heart.style.top = window.innerHeight + 'px';
+      heart.style.fontSize = Math.random() * 24 + 24 + 'px';
+      heart.style.opacity = Math.random();
+      heartsContainer.appendChild(heart);
+
+      gsap.to(heart, {
+        y: -window.innerHeight - 50,
+        x: "+=" + (Math.random()*100 - 50),
+        rotation: Math.random()*360,
+        duration: Math.random() * 5 + 5,
+        ease: "power1.out",
+        onComplete: () => heart.remove()
+      });
+    }
+    setInterval(createHeart, 300);
   </script>
 </body>
 </html>
